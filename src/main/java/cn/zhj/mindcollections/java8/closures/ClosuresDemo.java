@@ -132,6 +132,41 @@ public class ClosuresDemo {
         // map.put("inc", () -> count++);
         return map;
     }
+
+    /**
+     * Java闭包中使用可变对象
+     *
+     * 如下示例中，变量已经拷贝到了lambda表达式（匿名内部类中），和上面示例不同的是，这里拷贝的仅仅是引用
+     *
+     * 利用这个特性，我们几乎可以实现和JavaScript闭包相同的功能
+     *
+     */
+    private static class MyClosure {
+        public int value;
+        public MyClosure(int initValue) { this.value = initValue; }
+    }
+
+    public static Map<String, Supplier> createCounterWithMutableObject(int initValue) {
+        MyClosure closure = new MyClosure(initValue);
+        Map<String, Supplier> counter = new HashMap<>();
+        counter.put("val", () -> closure.value);
+        counter.put("inc", () -> closure.value++);
+        return counter;
+    }
+
+    public static void main(String[] args) {
+        Map<String, Supplier> v = createCounterWithMutableObject(42);
+        System.out.println(v.get("val").get()); // returns 42
+        System.out.println(v.get("inc").get()); // returns 42
+        System.out.println(v.get("val").get()); // returns 43
+    }
+
+    /**
+     *
+     *
+     *
+     *
+     */
 }
 
 

@@ -17,7 +17,6 @@ public class ReferenceInnerClass {
     /**
      * output:
      * null Good morning
-     * null Good morning
      * zhaohj Good morning
      * zhaohj Good morning
      *
