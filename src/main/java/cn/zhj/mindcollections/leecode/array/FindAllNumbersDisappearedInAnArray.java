@@ -23,6 +23,14 @@ import java.util.List;
  */
 public class FindAllNumbersDisappearedInAnArray {
 
+    /**
+     * 初始化辅助Map数据结构，key为1~n，对应value均初始化为1
+     *
+     * 遍历数组，出现过的数字，将期对应key的value置为-1；遍历结束后，返回value不为-1的key的数组
+     *
+     * @param nums
+     * @return
+     */
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> result = new ArrayList<>();
         HashMap<Integer, Integer> map = new HashMap<>();
