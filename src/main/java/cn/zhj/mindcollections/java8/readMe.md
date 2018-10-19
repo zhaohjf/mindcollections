@@ -17,10 +17,10 @@ lambda表达式（也称为闭包）是整个java8中最受期待的在Java语�
   *
   */
 public void thread() {
-	int answer = 42;
-	Thread t = new Thread(() -> System.out.println("The answer is: " + answer));
+    int answer = 42;
+    Thread t = new Thread(() -> System.out.println("The answer is: " + answer));
 
-	// error because incrementation of answer prevents it from being effectively final
+    // error because incrementation of answer prevents it from being effectively final
     // answer++;
 }
 ```
