@@ -12,6 +12,8 @@ public class ReferenceInnerClass {
                 return person.sayHello();
             }
         };
+
+        //person = new Person();
     }
 
     /**
