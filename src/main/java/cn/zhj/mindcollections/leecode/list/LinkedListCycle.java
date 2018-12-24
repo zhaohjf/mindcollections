@@ -5,19 +5,10 @@ package cn.zhj.mindcollections.leecode.list;
  */
 public class LinkedListCycle {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public static boolean hasCycle(ListNode head) {
 
         ListNode fast = head, slow = head;
-        while (fast != null && slow != null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
