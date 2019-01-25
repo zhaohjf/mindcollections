@@ -5,17 +5,12 @@ package cn.zhj.mindcollections.leecode.list;
  */
 public class SwapNodesInPairs {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public static ListNode swapPairs_2(ListNode head) {
 
+        /**
+         * 创建哨兵节点
+         *
+         */
         ListNode node = new ListNode(1);
         ListNode pre = node;
         pre.next = head;

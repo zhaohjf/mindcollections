@@ -1,24 +1,19 @@
 package cn.zhj.mindcollections.leecode.list;
 
-import java.util.Stack;
-
 /**
  * Created by zhaohongjie on 2018/12/20.
  */
 public class ReverseList {
 
-
-    //      Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
-
+    /**
+     * 反转链表
+     *
+     * 需要两个指针：1）指向前继节点（哨兵节点）；2）指向当前节点
+     *
+     *
+     * @param head
+     * @return
+     */
     public static ListNode reverseList(ListNode head) {
 
         ListNode cur = head;

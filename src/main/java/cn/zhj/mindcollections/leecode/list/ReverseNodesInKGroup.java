@@ -11,12 +11,21 @@ public class ReverseNodesInKGroup {
             return head;
         }
 
+        /**
+         * pre节点为一个空节点，将其指向cur节点，也就是head节点。
+         *
+         */
         ListNode dummy = new ListNode(-1);
         ListNode pre = dummy, cur = head;
         dummy.next = head;
 
         int i = 0;
         while (cur != null) {
+
+            /**
+             * 分段，按k值大小，将链表分段，在每段内再进行反转
+             *
+             */
             ++i;
             if (i % k == 0) {
                 pre = reverseOneGroup(pre, cur.next);
@@ -31,7 +40,9 @@ public class ReverseNodesInKGroup {
     }
 
     /**
-     * pre指针永远指向局部翻转链表的头节点
+     * pre指针（哨兵节点）永远指向局部翻转链表的头节点
+     *
+     * 难点是局部翻转，翻转后依然要保证是一个完整的链表。
      *
      * @param pre
      * @param next
