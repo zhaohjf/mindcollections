@@ -1,6 +1,8 @@
-package cn.zhj.mindcollections.leecode.binarysearch;
+package cn.zhj.mindcollections.leecode.binarytree.search;
 
 /**
+ * 有效二叉树校验
+ *
  * Created by zhaohongjie on 2019/1/8.
  */
 public class ValidateBinarySearchTree {

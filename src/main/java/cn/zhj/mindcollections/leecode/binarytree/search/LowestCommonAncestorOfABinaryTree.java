@@ -1,4 +1,4 @@
-package cn.zhj.mindcollections.leecode.binarysearch;
+package cn.zhj.mindcollections.leecode.binarytree.search;
 
 /**
  * Created by zhaohongjie on 2019/1/9.
