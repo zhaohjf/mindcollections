@@ -1,4 +1,4 @@
-package cn.zhj.mindcollections.leecode.other;
+package cn.zhj.mindcollections.leecode.search;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,6 +3,8 @@ package cn.zhj.mindcollections.leecode.search;
 import java.util.*;
 
 /**
+ * https://leetcode-cn.com/problems/n-queens/
+ *
  * Created by zhaohongjie on 2019/1/30.
  */
 public class NQueens {
