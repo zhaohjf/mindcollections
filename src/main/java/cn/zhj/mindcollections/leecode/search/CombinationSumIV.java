@@ -101,6 +101,9 @@ public class CombinationSumIV {
 
     /**
      * 动态规划
+     *
+     * 先由简单递归得到记忆化搜索，最后推出动态规划解法。
+     *
      */
     public int combinationSum4_dy(int[] nums, int target) {
         int[] memo = new int[target + 1];
