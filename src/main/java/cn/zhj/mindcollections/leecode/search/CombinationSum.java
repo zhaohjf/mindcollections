@@ -58,7 +58,7 @@ public class CombinationSum {
     }
 
     public static void main(String[] args) {
-        int[] param = {2, 3, 5};
+        int[] param = {10, 1, 2, 7, 6, 1, 5};
         CombinationSum obj = new CombinationSum();
         List<List<Integer>> lists = obj.combinationSum(param, 8);
 
