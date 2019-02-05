@@ -40,7 +40,7 @@ public class FindPeakElement {
 
             if ((m == 0 || nums[m - 1] <= nums[m]) && (m == nums.length - 1 || nums[m] >= nums[m + 1])) {
                 return m;
-            } else if (nums[m] < nums[m + 1]) {
+            } else if (m < nums.length - 1 && nums[m] < nums[m + 1]) {
                 l = m + 1;
             } else {
                 r = m - 1;
@@ -51,9 +51,14 @@ public class FindPeakElement {
         return -1;
     }
 
+    /**
+     * 输入: nums = [1,2,1,3,5,6,4]
+     * 输出: 1 或 5
+     * @param args
+     */
     public static void main(String[] args) {
         FindPeakElement findPeakElement = new FindPeakElement();
-        int peakElement = findPeakElement.findPeakElement(new int[]{1, 2});
+        int peakElement = findPeakElement.findPeakElement(new int[]{3, 2});
 
         System.out.println(peakElement);
     }
