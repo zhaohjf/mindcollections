@@ -41,9 +41,36 @@ public class SqrtX {
         return (int) r;
     }
 
+    public double getSqrtRoot(int n, double deltaThreshold, int maxTry) {
+
+        if (n <= 1) {
+            return -1.0;
+        }
+
+        double l = 0;
+        double r = (double) n;
+
+        for (int i = 0; i < maxTry; i++) {
+            double m = l + (r - l) / 2;
+            double square = m * m;
+            double delta = Math.abs((square / n) - 1);
+            if (delta < deltaThreshold) {
+                return m;
+            } else {
+                if (square > n) {
+                    r = m;
+                } else {
+                    l = m;
+                }
+            }
+        }
+
+        return -2.0;
+    }
+
     public static void main(String[] args) {
         SqrtX sqrtX = new SqrtX();
-        int i = sqrtX.mySqrt_1(2147483647);
+        double i = sqrtX.getSqrtRoot(10, 0.000001, 10000);
         System.out.println(i);
     }
 
