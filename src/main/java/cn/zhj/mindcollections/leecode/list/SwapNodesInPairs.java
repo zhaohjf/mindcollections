@@ -55,8 +55,20 @@ public class SwapNodesInPairs {
         return newhead;
     }
 
-    public ListNode swapPairs_3(ListNode head) {
-        if(head == null || head.next == null) return head;
+    /**
+     * 递归
+     *
+     * 分解问题，递归最小单位是交换前两个节点。
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode swapPairs_3(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
         ListNode node = head.next;
         head.next = swapPairs(head.next.next);
         node.next = head;
@@ -75,7 +87,7 @@ public class SwapNodesInPairs {
         three.next = four;
         four.next = five;
 
-        ListNode node = swapPairs_2(one);
+        ListNode node = swapPairs_3(one);
         while (node != null) {
             System.out.println(node.val);
             node = node.next;

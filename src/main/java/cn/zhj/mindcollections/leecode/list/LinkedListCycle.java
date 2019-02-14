@@ -1,6 +1,9 @@
 package cn.zhj.mindcollections.leecode.list;
 
 /**
+ *
+ * 链表若存在环的话，有且仅有一个环。
+ *
  * Created by zhaohongjie on 2018/12/22.
  */
 public class LinkedListCycle {
@@ -16,7 +19,7 @@ public class LinkedListCycle {
      * @param head
      * @return
      */
-    public static boolean hasCycle(ListNode head) {
+    public boolean hasCycle(ListNode head) {
 
         ListNode fast = head, slow = head;
         while (fast != null && fast.next != null) {
@@ -27,5 +30,22 @@ public class LinkedListCycle {
             }
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+
+        ListNode one = new ListNode(1);
+        ListNode two = new ListNode(2);
+        ListNode three = new ListNode(3);
+        ListNode four = new ListNode(4);
+        ListNode five = new ListNode(5);
+
+        one.next = two;
+        two.next = three;
+        three.next = four;
+        four.next = five;
+
+        LinkedListCycle obj = new LinkedListCycle();
+        System.out.println(obj.hasCycle(one));
     }
 }

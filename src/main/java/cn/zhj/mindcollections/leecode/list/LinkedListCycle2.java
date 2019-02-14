@@ -1,6 +1,8 @@
 package cn.zhj.mindcollections.leecode.list;
 
 /**
+ *
+ *
  * Created by zhaohongjie on 2018/12/24.
  */
 public class LinkedListCycle2 {
@@ -59,7 +61,7 @@ public class LinkedListCycle2 {
         two.next = three;
         three.next = four;
         four.next = five;
-        five.next = three;
+        five.next = two;
 
         LinkedListCycle2 cycle2 = new LinkedListCycle2();
         ListNode node = cycle2.detectCycle(one);
