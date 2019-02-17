@@ -46,7 +46,7 @@ public class NQueens {
     private void dfs(int n, int row, String currentStat, Set<Integer> cols, Set<Integer> pie, Set<Integer> na, List<String> result) {
 
         if (row >= n) {
-            // TODO 递归结束
+            // 递归结束
             result.add(currentStat);
             return;
         }
