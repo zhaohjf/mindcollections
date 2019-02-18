@@ -168,7 +168,7 @@ public class NQueens {
 
     public static void main(String[] args) {
         NQueens nQueens = new NQueens();
-        //nQueens.solveNQueens(4);
+        nQueens.solveNQueens(4);
 
         int i = nQueens.totalNQueens(4);
         System.out.println(i);
