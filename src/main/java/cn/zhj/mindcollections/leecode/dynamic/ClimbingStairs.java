@@ -34,6 +34,6 @@ public class ClimbingStairs {
 
     public static void main(String[] args) {
         ClimbingStairs climbingStairs = new ClimbingStairs();
-        System.out.println(climbingStairs.climbStairs(2));
+        System.out.println(climbingStairs.climbStairs(5));
     }
 }
