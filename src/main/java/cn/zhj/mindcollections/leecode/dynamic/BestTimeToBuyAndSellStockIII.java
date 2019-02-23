@@ -2,7 +2,7 @@ package cn.zhj.mindcollections.leecode.dynamic;
 
 /**
  * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/
- *
+ * <p>
  * Created by zhaohongjie on 2019/2/21.
  */
 public class BestTimeToBuyAndSellStockIII {
@@ -23,9 +23,12 @@ public class BestTimeToBuyAndSellStockIII {
 
         long[][][] profit = new long[prices.length][3][2];
 
-        profit[0][0][0] = 0; profit[0][0][1] = -prices[0];
-        profit[0][1][0] = Integer.MIN_VALUE; profit[0][1][1] = Integer.MIN_VALUE;
-        profit[0][2][0] = Integer.MIN_VALUE; profit[0][2][1] = Integer.MIN_VALUE;
+        profit[0][0][0] = 0;
+        profit[0][0][1] = -prices[0];
+        profit[0][1][0] = Integer.MIN_VALUE;
+        profit[0][1][1] = Integer.MIN_VALUE;
+        profit[0][2][0] = Integer.MIN_VALUE;
+        profit[0][2][1] = Integer.MIN_VALUE;
 
         for (int i = 1; i < prices.length; i++) {
 
@@ -54,9 +57,12 @@ public class BestTimeToBuyAndSellStockIII {
 
         long[][][] profit = new long[2][3][2];
 
-        profit[0][0][0] = 0; profit[0][0][1] = -prices[0];
-        profit[0][1][0] = Integer.MIN_VALUE; profit[0][1][1] = Integer.MIN_VALUE;
-        profit[0][2][0] = Integer.MIN_VALUE; profit[0][2][1] = Integer.MIN_VALUE;
+        profit[0][0][0] = 0;
+        profit[0][0][1] = -prices[0];
+        profit[0][1][0] = Integer.MIN_VALUE;
+        profit[0][1][1] = Integer.MIN_VALUE;
+        profit[0][2][0] = Integer.MIN_VALUE;
+        profit[0][2][1] = Integer.MIN_VALUE;
 
         for (int i = 1; i < prices.length; i++) {
 
@@ -77,9 +83,38 @@ public class BestTimeToBuyAndSellStockIII {
         return res;
     }
 
+    /**
+     * The thinking is simple and is inspired by the best solution from Single Number II (I read through the discussion after I use DP).
+     * Assume we only have 0 money at first;
+     * 4 Variables to maintain some interested 'ceilings' so far:
+     * The maximum of if we've just buy 1st stock, if we've just sold 1nd stock, if we've just buy 2nd stock, if we've just sold 2nd stock.
+     * Very simple code too and work well. I have to say the logic is simple than those in Single Number II.
+     *
+     * @param prices
+     * @return
+     */
+    public int maxProfit_other(int[] prices) {
+
+        int hold1 = Integer.MIN_VALUE;
+        int hold2 = Integer.MIN_VALUE;
+        int release1 = 0;
+        int release2 = 0;
+
+        for (int i : prices) {                            // Assume we only have 0 money at first
+            release2 = Math.max(release2, hold2 + i);     // The maximum if we've just sold 2nd stock so far.
+            hold2 = Math.max(hold2, release1 - i);        // The maximum if we've just buy  2nd stock so far.
+            release1 = Math.max(release1, hold1 + i);     // The maximum if we've just sold 1nd stock so far.
+            hold1 = Math.max(hold1, -i);                  // The maximum if we've just buy  1st stock so far.
+        }
+
+        //Since release1 is initiated as 0, so release2 will always higher than release1.
+        return release2;
+    }
+
     public static void main(String[] args) {
         BestTimeToBuyAndSellStockIII obj = new BestTimeToBuyAndSellStockIII();
-        System.out.println(obj.maxProfit(new int[]{3,3,5,0,0,3,1,4}));
-        System.out.println(obj.maxProfit_compress(new int[]{3,3,5,0,0,3,1,4}));
+        System.out.println(obj.maxProfit(new int[]{3, 3, 5, 0, 0, 3, 1, 4}));
+        System.out.println(obj.maxProfit_compress(new int[]{3, 3, 5, 0, 0, 3, 1, 4}));
+        System.out.println(obj.maxProfit_other(new int[]{3, 3, 5, 0, 0, 3, 1, 4}));
     }
 }
