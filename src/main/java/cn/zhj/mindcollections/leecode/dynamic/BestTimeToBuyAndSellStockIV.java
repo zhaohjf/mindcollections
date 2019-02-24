@@ -1,5 +1,7 @@
 package cn.zhj.mindcollections.leecode.dynamic;
 
+import java.util.Arrays;
+
 /**
  * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/
  *
@@ -98,10 +100,40 @@ public class BestTimeToBuyAndSellStockIV {
         return max;
     }
 
+    public int maxProfit_discussion(int k, int[] prices) {
+
+        // 当k大于prices数组长度的一半时
+        if (k >= prices.length >>> 1) {
+            int T_ik0 = 0, T_ik1 = Integer.MIN_VALUE;
+
+            for (int price : prices) {
+                int T_ik0_old = T_ik0;
+                T_ik0 = Math.max(T_ik0, T_ik1 + price);
+                T_ik1 = Math.max(T_ik1, T_ik0_old - price);
+            }
+
+            return T_ik0;
+        }
+
+        int[] T_ik0 = new int[k + 1];
+        int[] T_ik1 = new int[k + 1];
+        Arrays.fill(T_ik1, Integer.MIN_VALUE);
+
+        for (int price : prices) {
+            for (int j = k; j > 0; j--) {
+                T_ik0[j] = Math.max(T_ik0[j], T_ik1[j] + price);
+                T_ik1[j] = Math.max(T_ik1[j], T_ik0[j - 1] - price);
+            }
+        }
+
+        return T_ik0[k];
+    }
+
     public static void main(String[] args) {
         BestTimeToBuyAndSellStockIV obj = new BestTimeToBuyAndSellStockIV();
         System.out.println(obj.maxProfit(2, new int[]{3,2,6,5,0,3}));
         System.out.println(obj.maxProfit_compress(2, new int[]{3,2,6,5,0,3}));
+        System.out.println(obj.maxProfit_discussion(2, new int[]{3,2,6,5,0,3}));
     }
 
 }
