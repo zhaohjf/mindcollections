@@ -1,4 +1,4 @@
-package cn.zhj.mindcollections.leecode.other;
+package cn.zhj.mindcollections.leecode.queue;
 
 import java.util.*;
 

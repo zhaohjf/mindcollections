@@ -36,14 +36,20 @@ public class DepthOfBinaryTree {
         return 1 + Math.min(minDepth(root.left), minDepth(root.right));
     }
 
+    /**
+     * 递归逻辑更加清晰、合理
+     *
+     * @param root
+     * @return
+     */
     public int minDepth_2(TreeNode root) {
 
         if (root == null) {
             return 0;
         }
 
-        int leftDepth = minDepth(root.left);
-        int rightDepth = minDepth(root.right);
+        int leftDepth = minDepth_2(root.left);
+        int rightDepth = minDepth_2(root.right);
 
         return (leftDepth == 0 || rightDepth == 0)
                 ? leftDepth + rightDepth + 1

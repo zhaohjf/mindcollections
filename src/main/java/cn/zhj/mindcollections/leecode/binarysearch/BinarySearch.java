@@ -7,6 +7,13 @@ package cn.zhj.mindcollections.leecode.binarysearch;
  */
 public class BinarySearch {
 
+    /**
+     * 二分查找的模板要记下来
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public int search(int[] nums, int target) {
 
         if (nums == null || nums.length <= 0) {

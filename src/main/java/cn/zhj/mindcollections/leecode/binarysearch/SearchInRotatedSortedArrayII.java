@@ -1,6 +1,8 @@
 package cn.zhj.mindcollections.leecode.binarysearch;
 
 /**
+ * https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/
+ *
  * Created by zhaohongjie on 2019/2/12.
  */
 public class SearchInRotatedSortedArrayII {
@@ -13,6 +15,7 @@ public class SearchInRotatedSortedArrayII {
      * @return
      */
     public boolean search(int[] nums, int target) {
+
         if (nums == null || nums.length <= 0) {
             return false;
         }
@@ -25,6 +28,7 @@ public class SearchInRotatedSortedArrayII {
             /**
              * 夹逼去重的边界条件很是不好搞
              *
+             * new int[]{1,3,1,1,1}, 3
              */
             if (l != r && nums[l] == nums[r]) {
                 ++l;
@@ -42,6 +46,10 @@ public class SearchInRotatedSortedArrayII {
                 return true;
             }
 
+            /**
+             * 旋转后的数组，按mid值切分以后，肯定有一边是有序的
+             *
+             */
             // 左侧有序
             if (nums[m] >= nums[l]) {
 
@@ -64,7 +72,7 @@ public class SearchInRotatedSortedArrayII {
 
     public static void main(String[] args) {
         SearchInRotatedSortedArrayII obj = new SearchInRotatedSortedArrayII();
-        boolean result = obj.search(new int[]{0,0,1,1,1,3}, 0);
+        boolean result = obj.search(new int[]{1,3,1,1,1}, 3);
 
         System.out.println(result);
     }

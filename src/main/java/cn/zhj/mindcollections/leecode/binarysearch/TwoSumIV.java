@@ -6,6 +6,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst/
+ *
+ * 区别前一个题目，这个题目是在有序二叉树中查找两个值
+ *
  * Created by zhaohongjie on 2019/2/4.
  */
 public class TwoSumIV {
@@ -23,6 +27,14 @@ public class TwoSumIV {
         return find(root, k, set);
     }
 
+    /**
+     * 有状态的递归，可以更改为递推
+     *
+     * @param root
+     * @param k
+     * @param set
+     * @return
+     */
     public boolean find(TreeNode root, int k, Set<Integer> set) {
         if (root == null)
             return false;

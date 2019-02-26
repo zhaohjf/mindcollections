@@ -7,6 +7,12 @@ package cn.zhj.mindcollections.leecode.binarysearch;
  */
 public class PeakIndexInAMountainArray {
 
+    /**
+     * 数组前提是一个山脉，在峰顶左右是严格递增递减的。
+     *
+     * @param A
+     * @return
+     */
     public int peakIndexInMountainArray(int[] A) {
 
         if (A == null || A.length <= 0) {
@@ -38,6 +44,12 @@ public class PeakIndexInAMountainArray {
         return -1;
     }
 
+    /**
+     * 遍历数组，O(n)
+     *
+     * @param A
+     * @return
+     */
     public int peakIndexInMountainArray_1(int[] A) {
         int i = 0;
         for (i = 0; i < A.length - 1; i++) {

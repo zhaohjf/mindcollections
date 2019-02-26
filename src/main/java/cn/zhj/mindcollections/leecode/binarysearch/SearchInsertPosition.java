@@ -10,6 +10,8 @@ public class SearchInsertPosition {
     /**
      * 已知是有序数组，求元素位置——很明显是一个二分查找的问题空间
      *
+     * 返回l即可，若没有找到的情况下，l == m or l - 1 == m
+     *
      * @param nums
      * @param target
      * @return

@@ -1,6 +1,8 @@
 package cn.zhj.mindcollections.leecode.binarysearch;
 
 /**
+ * https://leetcode-cn.com/problems/arranging-coins/
+ *
  * Created by zhaohongjie on 2019/2/5.
  */
 public class ArrangingCoins {
@@ -24,7 +26,7 @@ public class ArrangingCoins {
 
             int m = l + (r - l) / 2;
             /**
-             * 求1~m累计和
+             * 求1到m递增序列之和，如果大于n，在左半边打，小于n在右半边找
              *
              */
             long sum = (m + 1) * m / 2;

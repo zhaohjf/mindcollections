@@ -3,6 +3,8 @@ package cn.zhj.mindcollections.leecode.binarysearch;
 /**
  * https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted
  *
+ * 难点：要通过二分法，查找两个数
+ *
  * Created by zhaohongjie on 2019/2/4.
  */
 public class TwoSumII {

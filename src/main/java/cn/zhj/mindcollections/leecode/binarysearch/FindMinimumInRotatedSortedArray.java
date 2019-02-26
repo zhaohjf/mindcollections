@@ -3,6 +3,8 @@ package cn.zhj.mindcollections.leecode.binarysearch;
 /**
  * https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/
  *
+ * 旋转数组的二分查找法
+ *
  * Created by zhaohongjie on 2019/2/12.
  */
 public class FindMinimumInRotatedSortedArray {
@@ -13,6 +15,8 @@ public class FindMinimumInRotatedSortedArray {
      * 按照升序排序的数组在预先未知的某个点上进行了旋转
      *
      * 搜索波谷位置
+     *
+     * 难点：在确定向左，还是向右移动时情况相对复杂些
      *
      * @param nums
      * @return
@@ -30,6 +34,7 @@ public class FindMinimumInRotatedSortedArray {
 
             int m = l + (r - l) / 2;
 
+            // 最小元素出现在其左右元素都大于自身的位置上
             if ((m <= l || nums[m - 1] >= nums[m]) && (m >= r || nums[m + 1] >= nums[m])) {
                 return nums[m];
             }

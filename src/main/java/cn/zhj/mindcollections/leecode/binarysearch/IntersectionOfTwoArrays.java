@@ -25,8 +25,10 @@ public class IntersectionOfTwoArrays {
             return intersection(nums2, nums1);
         }
 
+        // 对较短数组排序
         Arrays.sort(nums2);
 
+        // 遍历另一个数组，使用二分查找在较短数组中查找元素是否存在。
         for (int i : nums1) {
             if (binarySearch(nums2, i)) {
                 res.add(i);
