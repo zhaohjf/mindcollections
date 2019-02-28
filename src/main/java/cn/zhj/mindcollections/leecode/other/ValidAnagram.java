@@ -1,10 +1,21 @@
 package cn.zhj.mindcollections.leecode.other;
 
 /**
+ * https://leetcode-cn.com/problems/valid-anagram/
+ *
  * Created by zhaohongjie on 2019/1/2.
  */
 public class ValidAnagram {
 
+    /**
+     * 统计字条个数，判断相应的字符数是否相等
+     *
+     * 利用char数组，比hashMap的性能会好一些
+     *
+     * @param s
+     * @param t
+     * @return
+     */
     public static boolean isAnagram(String s, String t) {
 
         /**

@@ -13,6 +13,10 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     /**
      * 以zigzag顺序来打印树
      *
+     * 需要根据层的奇偶性来决定递归遍历的顺序，是先遍历左节点， 还是先遍历右节点
+     *
+     * 这里的做法有比较tricky，它是在往对应层添加数据时，根据奇偶性来判断是从列表的尾部追加，还是插入到列表的第一个位置
+     *
      * @param root
      * @return
      */

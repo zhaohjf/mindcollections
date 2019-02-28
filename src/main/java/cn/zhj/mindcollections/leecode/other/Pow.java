@@ -104,7 +104,7 @@ public class Pow {
 
         Pow pow = new Pow();
 
-        double v = pow.myPow_2(2, -2147483648);
+        double v = pow.myPow_2(2, 4);
 
         System.out.println(v);
     }

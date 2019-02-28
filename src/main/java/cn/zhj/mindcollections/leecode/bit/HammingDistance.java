@@ -5,6 +5,15 @@ package cn.zhj.mindcollections.leecode.bit;
  */
 public class HammingDistance {
 
+    /**
+     * 对两个数求异或值，这样，两个数中对应位相同的都会变成0，不同的变成1
+     *
+     * 所以，接下来，只需要统计二进制数的为1有个数。
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     public int hammingDistance(int x, int y) {
 
         int z = x ^ y;

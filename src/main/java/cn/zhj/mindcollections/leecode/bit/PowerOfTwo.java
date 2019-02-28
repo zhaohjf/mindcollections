@@ -12,6 +12,8 @@ public class PowerOfTwo {
         /**
          * 正数
          *
+         * 2的n次方数的二进制数中，有且只有一位为1
+         *
          */
         if (n > 0 && (n & (n - 1)) == 0) {
             return true;

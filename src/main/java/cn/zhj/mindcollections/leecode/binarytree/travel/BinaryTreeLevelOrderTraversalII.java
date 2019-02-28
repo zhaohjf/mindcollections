@@ -15,6 +15,8 @@ public class BinaryTreeLevelOrderTraversalII {
      *
      * 简单的方法，对得出list倒置下就可以，时间能控制在2ms
      *
+     * 利用栈，将前一个算法得出的结果依次入栈，再重新读出即可。
+     *
      * @param root
      * @return
      */
@@ -65,6 +67,10 @@ public class BinaryTreeLevelOrderTraversalII {
         n_20.left = n_15;
         n_20.right = n_7;
 
-        levelOrderBottom(n_3);
+        List<List<Integer>> lists = levelOrderBottom(n_3);
+        lists.stream().forEach(list -> {
+            list.forEach(c -> System.out.print(c + ", "));
+            System.out.println();
+        });
     }
 }

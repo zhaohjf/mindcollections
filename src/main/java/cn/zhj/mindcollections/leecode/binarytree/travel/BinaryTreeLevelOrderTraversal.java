@@ -33,6 +33,14 @@ public class BinaryTreeLevelOrderTraversal {
         return levelOrder;
     }
 
+    /**
+     * 定义一个level变量，来表示当前遍历的是哪层的结点
+     *
+     * 遍历到根节点为空时退出，递归顺序是从左节点开始，依次把访问到的节点放入对就层的List中
+     *
+     * @param node
+     * @param level
+     */
     private void dfs(TreeNode node, int level) {
 
         if (node == null) {
@@ -51,6 +59,10 @@ public class BinaryTreeLevelOrderTraversal {
 
     /**
      * 宽度优先遍历（2ms）
+     *
+     * 使用队列来进行广度优先遍历（广度优先遍历找到的路径一定是最短路径）
+     *
+     * 根节点入队，遍历时记录当前队列里所有节点的值（按顺序），然后将每个节点的左右子节点再次入队
      *
      * @param root
      * @return

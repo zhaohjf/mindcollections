@@ -25,13 +25,18 @@ public class SlidingWindowMaximum {
         }
 
         for (int i = 0; i < nums.length; i++) {
+
+            // 队列头一个元素的下标，如果超出窗口，就删除
             if (i >= k && window.peekFirst() <= i - k) {
                 window.pollFirst();
             }
+
+            // 从后往前，如果有元素小于当前值，则删除这个元素
             while (!window.isEmpty() && nums[window.peekLast()] <= nums[i]) {
                 window.pollLast();
             }
             window.add(i);
+
             if (i >= k - 1) {
                 res[i- k + 1] = nums[window.peekFirst()];
             }
