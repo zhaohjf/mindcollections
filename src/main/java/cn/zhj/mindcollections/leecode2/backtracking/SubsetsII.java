@@ -1,6 +1,5 @@
 package cn.zhj.mindcollections.leecode2.backtracking;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

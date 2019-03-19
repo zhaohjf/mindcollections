@@ -1,7 +1,6 @@
 package cn.zhj.mindcollections.leecode2.backtracking;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
