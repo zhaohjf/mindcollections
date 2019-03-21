@@ -81,6 +81,7 @@ public class SubsetsII {
      * @param res
      */
     private void dfs_1(int[] nums, int start, List<Integer> subres, List<List<Integer>> res) {
+
         res.add(new ArrayList<>(subres));
 
         for (int i = start; i < nums.length; i++) {
@@ -200,13 +201,13 @@ public class SubsetsII {
     public List<List<Integer>> subsetsWithDup_Liner(int[] nums) {
 
         Arrays.sort(nums);
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<>();
         res.add(new ArrayList<>());
         int i = 0;
         while (i < nums.length) {
             int num = nums[i];
             int count = 0;
-            List<List<Integer>> tmp = new ArrayList<List<Integer>>();
+            List<List<Integer>> tmp = new ArrayList<>();
             while (i < nums.length && nums[i] == num) {
                 i++;
                 count++;
