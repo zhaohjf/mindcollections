@@ -32,6 +32,6 @@ public class KthLargestElementInAStream {
 
     public static void main(String[] args) {
         KthLargestElementInAStream ojb = new KthLargestElementInAStream(3, new int[]{1, 3, -1, -3, 5, 3, 6, 7});
-        System.out.println(ojb);
+        System.out.println(ojb.add(1));
     }
 }

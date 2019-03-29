@@ -31,7 +31,7 @@ public class CountingBits {
 
     public static void main(String[] args) {
         CountingBits countingBits = new CountingBits();
-        int[] ints = countingBits.countBits(2);
+        int[] ints = countingBits.countBits(5);
 
         for (int i : ints) {
             System.out.println(i);
