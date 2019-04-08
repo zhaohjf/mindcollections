@@ -38,7 +38,7 @@ public class FindAllDuplicatesInAnArray {
      */
     public List<Integer> findDuplicates_1(int[] nums) {
 
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         int[] count = new int[nums.length + 1];
 
         for (int i = 0; i < nums.length; i++)
@@ -53,6 +53,6 @@ public class FindAllDuplicatesInAnArray {
 
     public static void main(String[] args) {
         FindAllDuplicatesInAnArray obj = new FindAllDuplicatesInAnArray();
-        obj.findDuplicates(new int[]{4, 3, 2, 7, 8, 2, 3, 1}).forEach(c -> System.out.print(c + " "));
+        obj.findDuplicates_1(new int[]{4, 3, 2, 7, 8, 2, 3, 1}).forEach(c -> System.out.print(c + " "));
     }
 }
