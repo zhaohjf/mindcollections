@@ -24,6 +24,25 @@
             <version>4.5.6</version>
         </dependency>
 
+        <!-- hadoop hive begin -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.2.0</version>
+            <classifier>tests</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!-- hadoop hive end -->
+
     </dependencies>
 
     <build>
