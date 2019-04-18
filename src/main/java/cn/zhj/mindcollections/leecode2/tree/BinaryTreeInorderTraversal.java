@@ -19,9 +19,9 @@ public class BinaryTreeInorderTraversal {
             return res;
         }
 
-        inorderTraversal(root.left);
+        inorderTraversal_recur(root.left);
         res.add(root.val);
-        inorderTraversal(root.right);
+        inorderTraversal_recur(root.right);
 
         return res;
     }
