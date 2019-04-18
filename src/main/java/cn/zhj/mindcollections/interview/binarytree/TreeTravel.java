@@ -127,17 +127,23 @@ public class TreeTravel {
 
         Stack<Node> stack = new Stack<>();
         stack.push(head);
-        Node c = null;
+        Node pre = head;  // 前继节点
+        Node curr = null; // 当前节点
 
         while (!stack.isEmpty()) {
-            c = stack.peek();
-            if (c.left != null && head != c.left && head != c.right) {
-                stack.push(c.left);
-            } else if (c.right != null && head != c.right) {
-                stack.push(c.right);
-            } else {
+            curr = stack.peek();
+            // 如果当前节点 左孩子 不为空， 且 前一个被处理过的节点 不是 它的 左 或者 右 孩子； 否则，
+            if (curr.left != null && pre != curr.left && pre != curr.right) {
+                stack.push(curr.left);
+            }
+            // 如果当前节点 右孩子 不为空， 且 前一个被处理过的节点 不是 它的 右孩子； 否则，
+            else if (curr.right != null && pre != curr.right) {
+                stack.push(curr.right);
+            }
+            // 保存栈顶元素，并将其记录到pre指针
+            else {
                 System.out.print(stack.pop().value + " ");
-                head = c;
+                pre = curr;
             }
         }
 
