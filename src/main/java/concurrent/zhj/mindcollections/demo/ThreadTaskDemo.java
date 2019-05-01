@@ -1,4 +1,4 @@
-package alg.zhj.mindcollections.concurrent.demo;
+package concurrent.zhj.mindcollections.demo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
