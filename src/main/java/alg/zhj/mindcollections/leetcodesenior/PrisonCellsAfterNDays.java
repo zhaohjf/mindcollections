@@ -1,6 +1,9 @@
-package alg.zhj.mindcollections.leecode2.other;
+package alg.zhj.mindcollections.leetcodesenior;
 
 /**
+ * https://leetcode-cn.com/problems/prison-cells-after-n-days
+ * 位运算解决 N天后的监狱问题
+ *
  * Created by zhaohongjie on 2019/5/9.
  */
 public class PrisonCellsAfterNDays {

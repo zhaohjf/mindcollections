@@ -1,8 +1,10 @@
-package alg.zhj.mindcollections.leecode2.string;
+package alg.zhj.mindcollections.leetcodesenior;
 
 /**
  * https://leetcode-cn.com/problems/longest-palindromic-substring/ 中文版
  * https://leetcode.com/problems/longest-palindromic-substring 英文版
+ *
+ * 动态规则解决最大回文子串问题
  *
  * Created by zhaohongjie on 2019/4/22.
  */
