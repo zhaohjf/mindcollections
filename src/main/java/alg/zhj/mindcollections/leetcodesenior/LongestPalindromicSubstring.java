@@ -60,6 +60,6 @@ public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         LongestPalindromicSubstring obj = new LongestPalindromicSubstring();
-        System.out.print(obj.longestPalindrome("babad"));
+        System.out.print(obj.longestPalindrome("bababd"));
     }
 }
