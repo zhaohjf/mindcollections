@@ -11,7 +11,7 @@ public class LinkedListShareSequence {
      * @param head1
      * @param head2
      */
-    public void printCommonPart(Node head1, Node head2) {
+    public void printCommonPart(ListNode head1, ListNode head2) {
         System.out.print("Common Part: ");
         while (head1 != null && head2 != null) {
             if (head1.value < head2.value) {
@@ -29,20 +29,20 @@ public class LinkedListShareSequence {
 
     public static void main(String[] args) {
 
-        Node one = new Node(1);
-        Node two = new Node(2);
-        Node three = new Node(3);
-        Node four = new Node(4);
-        Node five = new Node(5);
+        ListNode one = new ListNode(1);
+        ListNode two = new ListNode(2);
+        ListNode three = new ListNode(3);
+        ListNode four = new ListNode(4);
+        ListNode five = new ListNode(5);
 
-        Node one1 = new Node(1);
-        Node two1 = new Node(2);
-        Node three1 = new Node(3);
-        Node four1 = new Node(4);
-        Node five1 = new Node(5);
+        ListNode one1 = new ListNode(1);
+        ListNode two1 = new ListNode(2);
+        ListNode three1 = new ListNode(3);
+        ListNode four1 = new ListNode(4);
+        ListNode five1 = new ListNode(5);
 
-        Node head1 = new Node(0);
-        Node head2 = new Node(0);
+        ListNode head1 = new ListNode(0);
+        ListNode head2 = new ListNode(0);
 
         head1.next = one;
         head1.next.next = two;

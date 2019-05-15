@@ -3,12 +3,12 @@ package alg.zhj.mindcollections.interview.list;
 /**
  * Created by zhaohongjie on 2019/5/13.
  */
-public class Node {
+public class ListNode {
 
     public int value;
-    public Node next;
+    public ListNode next;
 
-    public Node(int data) {
+    public ListNode(int data) {
         this.value = data;
     }
 }
