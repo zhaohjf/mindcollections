@@ -2,6 +2,7 @@ package alg.zhj.mindcollections.leecode.search;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 /**
  * https://leetcode-cn.com/problems/permutations/
@@ -85,5 +86,8 @@ public class Permutations {
             list.forEach(c -> System.out.print(c + ","));
             System.out.println();
         });
+
+        Supplier<String> supplier = () -> permutations.toString();
+        supplier.get();
     }
 }
