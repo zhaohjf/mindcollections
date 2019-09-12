@@ -58,5 +58,6 @@ public class ContainsDuplicateII {
     public static void main(String[] args) {
         ContainsDuplicateII obj = new ContainsDuplicateII();
         System.out.print(obj.containsNearbyDuplicate_1(new int[]{3,1,2,3,4}, 4));
+
     }
 }
