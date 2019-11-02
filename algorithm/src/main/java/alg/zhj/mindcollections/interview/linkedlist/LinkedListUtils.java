@@ -19,6 +19,13 @@ public class LinkedListUtils {
         return head;
     }
 
+    public static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + ", ");
+            head = head.next;
+        }
+    }
+
     public static void main(String[] args) {
         ListNode list = getLinkedList(1, 4, 5, 6, 9);
         while (list != null) {

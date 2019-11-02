@@ -45,6 +45,14 @@ public class MergeSortedList {
         return head.next;
     }
 
+    /**
+     * 递归思路：
+     * 子问题——比较两个列表的头节点，并返回最值最小的节点
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode recursion(ListNode l1, ListNode l2) {
 
         if (l1 == null) {
