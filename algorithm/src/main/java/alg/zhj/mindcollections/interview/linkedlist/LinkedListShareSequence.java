@@ -1,4 +1,4 @@
-package alg.zhj.mindcollections.interview.list;
+package alg.zhj.mindcollections.interview.linkedlist;
 
 /**
  * Created by zhaohongjie on 2019/5/13.
@@ -14,12 +14,12 @@ public class LinkedListShareSequence {
     public void printCommonPart(ListNode head1, ListNode head2) {
         System.out.print("Common Part: ");
         while (head1 != null && head2 != null) {
-            if (head1.value < head2.value) {
+            if (head1.val < head2.val) {
                 head1 = head1.next;
-            } else if (head1.value > head2.value) {
+            } else if (head1.val > head2.val) {
                 head2 = head2.next;
             } else {
-                System.out.print(head1.value + " ");
+                System.out.print(head1.val + " ");
                 head1 = head1.next;
                 head2 = head2.next;
             }

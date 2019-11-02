@@ -1,4 +1,4 @@
-package alg.zhj.mindcollections.interview.list;
+package alg.zhj.mindcollections.interview.linkedlist;
 
 /**
  * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list
