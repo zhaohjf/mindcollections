@@ -1,6 +1,8 @@
 package alg.zhj.mindcollections.interview.linkedlist;
 
 /**
+ * https://leetcode-cn.com/problems/remove-linked-list-elements/
+ *
  * Created by zhaohongjie on 2019/11/2.
  */
 public class RemoveElement {
