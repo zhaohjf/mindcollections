@@ -9,17 +9,24 @@ public class MiddleOfTheLinkedList {
 
     public ListNode middleNode(ListNode head) {
 
-        if (head == null) {
+        if (head == null || head.next == null) {
             return head;
         }
 
-        ListNode slow = head, fast = head;
-        while (fast != null && fast.next != null) {
+        if (head.next.next == null) {
+            return head.next;
+        }
+
+        ListNode slow = head;
+        // 快指针多走一步，这个慢指针会正好是要删除节点的前一个节点
+        ListNode fast = head.next.next;
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        return slow;
+        slow.next = slow.next.next;
+        return head;
     }
 
     public static void main(String[] args) {
@@ -27,6 +34,6 @@ public class MiddleOfTheLinkedList {
 
         MiddleOfTheLinkedList obj = new MiddleOfTheLinkedList();
         ListNode listNode = obj.middleNode(list);
-        System.out.print(listNode.val);
+        LinkedListUtils.printList(listNode);
     }
 }
