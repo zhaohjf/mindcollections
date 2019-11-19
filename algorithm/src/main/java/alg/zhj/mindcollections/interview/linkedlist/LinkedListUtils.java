@@ -19,6 +19,22 @@ public class LinkedListUtils {
         return head;
     }
 
+    public static ListNode getCircleLinkedList(int headValue, int... array) {
+
+        ListNode head = new ListNode(headValue);
+
+        ListNode curr = head;
+        for (int value : array) {
+            ListNode node = new ListNode(value);
+            curr.next = node;
+            curr = node;
+        }
+
+        curr.next = head;
+
+        return head;
+    }
+
     public static void printList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + ", ");

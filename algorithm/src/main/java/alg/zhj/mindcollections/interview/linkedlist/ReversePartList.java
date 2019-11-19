@@ -46,6 +46,7 @@ public class ReversePartList {
             hNode = next;
         }
 
+        // 如果翻转部分包含了头节点的话
         if (preStartNode != null) {
             preStartNode.next = pre;
             return head;
