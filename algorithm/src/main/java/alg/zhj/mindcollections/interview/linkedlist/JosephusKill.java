@@ -6,6 +6,7 @@ package alg.zhj.mindcollections.interview.linkedlist;
 public class JosephusKill {
 
     /**
+     * 删除一个节点就要遍历m次，所以复杂度为O(m*n)
      *
      * @param head
      * @param m
