@@ -44,11 +44,70 @@ public class PalindromeListTest {
         return true;
     }
 
+    /**
+     * 反转右半边节点
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindromeList_2(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return true;
+        }
+
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;  // slow -> 中部
+            fast = fast.next.next;  // fast -> 结尾
+        }
+
+        // 中间节点的下一个
+        fast = slow.next;
+        // 中间节点批向null
+        slow.next = null;
+
+        // 临时节点，用来翻转链表
+        ListNode node = null;
+        while (fast != null) {
+            node = fast.next;
+            fast.next = slow;
+            slow = fast;
+            fast = node;
+        }
+
+        node = slow; // 最后一个节点
+        fast = head; // 第一个节点
+        boolean res = true;
+        while (slow != null && fast != null) {
+            if (slow.val != fast.val) {
+                res = false;
+                break;
+            }
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        slow = node.next;
+        node.next = null;
+        while (slow != null) {
+            fast = slow.next;
+            slow.next = node;
+            node = slow;
+            slow = fast;
+        }
+
+        return res;
+    }
+
     public static void main(String[] args) {
-        ListNode list = LinkedListUtils.getLinkedList(2, 3, 4, 5, 4, 3, 3);
+        ListNode list = LinkedListUtils.getLinkedList(2, 3, 4, 5, 4, 3, 2);
 
         PalindromeListTest obj = new PalindromeListTest();
-        boolean res = obj.isPalindromeList(list);
+        boolean res = obj.isPalindromeList_2(list);
         System.out.println(res);
+
+        LinkedListUtils.printList(list);
     }
 }
