@@ -18,6 +18,8 @@ public class MergeKSortedLists {
      *
      * 7ms
      *
+     * 时间慢可能是因为PriorityQueue这个数据结构太重了
+     *
      * @param lists
      * @return
      */
