@@ -32,6 +32,33 @@ public class LinkedListCycle {
         return false;
     }
 
+    /**
+     * 20200322
+     * 出错点：
+     * 1，head 不用提前判空，while循环条件里已经做了这部分工作
+     * 2，必须在快慢指针都向前走了一步之后，才判断其是否相等（因为，初始状态它俩都指向头节点，初始状态下是永远相等的）
+     *
+     * @param head
+     * @return
+     */
+    public boolean cycle_20200322(ListNode head) {
+
+        if (head == null) {
+            return false;
+        }
+
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast.val == slow.val) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
 
         ListNode one = new ListNode(1);
@@ -46,6 +73,6 @@ public class LinkedListCycle {
         four.next = five;
 
         LinkedListCycle obj = new LinkedListCycle();
-        System.out.println(obj.hasCycle(one));
+        System.out.println(obj.cycle_20200322(one));
     }
 }

@@ -29,6 +29,28 @@ public class ReverseList {
         return prev;
     }
 
+    /**
+     * 20200322
+     * 还不错重写这个算法没有出错
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode reverse_20200322(ListNode head) {
+
+        ListNode pre = null;
+        ListNode cur = head;
+
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+
+        return pre;
+    }
+
     public static void main(String[] args) {
         ListNode one = new ListNode(1);
         ListNode two = new ListNode(2);
@@ -41,7 +63,7 @@ public class ReverseList {
         three.next = four;
         four.next = five;
 
-        ListNode node = reverseList(one);
+        ListNode node = reverse_20200322(one);
         while (node.next != null) {
             System.out.println(node.val);
             node = node.next;

@@ -12,6 +12,8 @@ public class RemoveLastKthNode {
      *
      * 小于0，开始第二次遍历，这时lastKth开始+1递增，直到lastKth == 0 时，这时指向的节点就是要删除节点的一个节点。
      *
+     * 20200322 重新温习了下思路
+     *
      * @param node
      * @param lastKth
      * @return
@@ -51,7 +53,7 @@ public class RemoveLastKthNode {
         RemoveLastKthNode obj = new RemoveLastKthNode();
         ListNode list = LinkedListUtils.getLinkedList(2, 3, 4, 5, 6, 9, 12);
 
-        ListNode listNode = obj.removeLastKthNode(list, 7);
+        ListNode listNode = obj.removeLastKthNode(list, 6);
         LinkedListUtils.printList(listNode);
     }
 }

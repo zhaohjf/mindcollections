@@ -23,7 +23,7 @@ public class DeleteMiddleNode {
     }
 
     public static void main(String[] args) {
-        ListNode list = LinkedListUtils.getLinkedList(1, 2, 3, 4, 5,6);
+        ListNode list = LinkedListUtils.getLinkedList(1, 2, 3, 4, 5);
 
         DeleteMiddleNode obj = new DeleteMiddleNode();
         obj.removeMiddleNode(list);

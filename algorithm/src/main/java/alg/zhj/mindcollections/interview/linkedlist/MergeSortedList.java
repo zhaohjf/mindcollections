@@ -49,6 +49,8 @@ public class MergeSortedList {
      * 递归思路：
      * 子问题——比较两个列表的头节点，并返回最值最小的节点
      *
+     * 20200322 重新温习了下思路
+     *
      * @param l1
      * @param l2
      * @return
