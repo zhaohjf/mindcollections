@@ -11,8 +11,10 @@ public class NumArray {
     private int[] nums;
 
     public NumArray(int[] nums) {
-        this.nums = nums;
-        this.root = buildTree(nums, 0, nums.length - 1);
+        if (nums.length > 0) {
+            this.nums = nums;
+            this.root = buildTree(nums, 0, nums.length - 1);
+        }
     }
 
     private INode buildTree(int[] val, int start, int end) {
