@@ -1,6 +1,7 @@
 package alg.zhj.mindcollections.leecode.segmenttree;
 
 /**
+ * 线段树 segment tree
  * https://leetcode-cn.com/problems/range-sum-query-mutable/submissions/
  *
  * Created by zhaohongjie on 2020/3/29.

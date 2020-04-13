@@ -1,5 +1,5 @@
   
-package alg.zhj.mindcollections.leetcodesenior;
+package alg.zhj.mindcollections.mathematics;
 
 import java.util.ArrayList;
 
@@ -30,8 +30,30 @@ public class Lesson5_1 {
         }
     }
 
+    public static void factorization(long total, ArrayList<Long> result) {
+
+        if (total == 1) {
+            System.out.println(result);
+            if (!result.contains(1L)) {
+                result.add(1L);
+                System.out.println(result);
+            }
+            return;
+        }
+
+        for (long i = 1; i <= total;i++) {
+            if (i == 1L && result.contains(1L)) continue;
+            if (total % i != 0) continue;
+            ArrayList<Long> newResult = (ArrayList<Long>) (result.clone());
+            newResult.add(i);
+            factorization(total / i, newResult);
+        }
+    }
+
     public static void main(String[] args) {
-        int total = 10;
-        Lesson5_1.get(total, new ArrayList<Long>());
+//        int total = 10;
+//        Lesson5_1.get(total, new ArrayList<Long>());
+
+        Lesson5_1.factorization(8, new ArrayList<Long>());
     }
 }

@@ -12,6 +12,7 @@ public class NumArray_2 {
     int n;
 
     /**
+     * 树状数组为什么要从 +1 开始
      *
      * @param nums
      */
