@@ -115,7 +115,7 @@ public class Combinations {
 
     public static void main(String[] args) {
         Combinations combinations = new Combinations();
-        List<List<Integer>> combine = combinations.combine_2(4, 3);
+        List<List<Integer>> combine = combinations.combine_2(5, 3);
 
         combine.forEach(list -> {
             list.forEach(c -> System.out.print(c + ","));
