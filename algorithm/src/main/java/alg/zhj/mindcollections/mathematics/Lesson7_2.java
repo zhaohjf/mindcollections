@@ -57,6 +57,7 @@ public class Lesson7_2 {
 
     public static void main(String[] args) {
         ArrayList<String> letters = Lists.newArrayList("a", "d", "e");
-        calLetterList(letters, new ArrayList<String>());
+        //calLetterList(letters, new ArrayList<String>());
+        permutate(letters, new ArrayList<String>());
     }
 }
