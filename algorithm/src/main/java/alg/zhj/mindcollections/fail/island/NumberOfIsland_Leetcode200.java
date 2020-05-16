@@ -1,9 +1,9 @@
-package alg.zhj.mindcollections.fail;
+package alg.zhj.mindcollections.fail.island;
 
 /**
  * Created by zhaohongjie on 2020/5/15.
  */
-public class NumberOfIsland_Leecode200 {
+public class NumberOfIsland_Leetcode200 {
 
     public int numIslands(char[][] grid) {
 
@@ -49,7 +49,7 @@ public class NumberOfIsland_Leecode200 {
 
     public static void main(String[] args) {
         char[][] a = {{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '0', '0', '0'}};
-        NumberOfIsland_Leecode200 obj = new NumberOfIsland_Leecode200();
+        NumberOfIsland_Leetcode200 obj = new NumberOfIsland_Leetcode200();
         System.out.print(obj.numIslands(a));
     }
 }
