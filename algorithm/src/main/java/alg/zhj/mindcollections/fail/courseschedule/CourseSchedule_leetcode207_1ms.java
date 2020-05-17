@@ -43,6 +43,20 @@ public class CourseSchedule_leetcode207_1ms {
         return true;
     }
 
+    static class Node{
+        int val;
+        Node next;
+
+        Node(int val){
+            this.val=val;
+        }
+
+        Node(int val,Node next){
+            this.val=val;
+            this.next=next;
+        }
+    }
+
     public static void main(String[] args) {
         int[][] pre = {{1, 0}};
         CourseSchedule_leetcode207_1ms ob = new CourseSchedule_leetcode207_1ms();
@@ -50,16 +64,3 @@ public class CourseSchedule_leetcode207_1ms {
     }
 }
 
-class Node{
-    int val;
-    Node next;
-
-    Node(int val){
-        this.val=val;
-    }
-
-    Node(int val,Node next){
-        this.val=val;
-        this.next=next;
-    }
-}
