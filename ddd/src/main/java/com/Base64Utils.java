@@ -438,8 +438,13 @@ public class Base64Utils {
                 "2Q==";
         //GenerateImage(strImge, "/Users/zhaohongjie/Downloads/11.jpg");
         // 测试从图片文件转换为Base64编码
-        String imgStr = GetImageStr("/Users/zhaohongjie/Downloads/5c819a096a9a8e61.jpg");
-        System.out.println(imgStr);
-        GenerateImage(strImge, "/Users/zhaohongjie/Downloads/11.jpg");
+//        String imgStr = GetImageStr("/Users/zhaohongjie/Downloads/5c819a096a9a8e61.jpg");
+//        System.out.println(imgStr);
+//        GenerateImage(strImge, "/Users/zhaohongjie/Downloads/11.jpg");
+
+        File file = new File("/Users/zhaohongjie/Downloads/helloTest/hello");
+        if (!file.exists()) {
+            file.mkdirs();
+        }
     }
 }
