@@ -68,6 +68,6 @@ public class MaximumProductSubarray {
 
     public static void main(String[] args) {
         MaximumProductSubarray obj = new MaximumProductSubarray();
-        System.out.println(obj.maxProduct(new int[]{-2, -3, 0, -1, 3, 2, -1, 2}));
+        System.out.println(obj.maxProduct_recurse(new int[]{-2, -3, 0, -1, 3, 2, -1, 2}));
     }
 }
