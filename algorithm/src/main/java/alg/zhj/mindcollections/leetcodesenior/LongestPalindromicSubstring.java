@@ -73,7 +73,7 @@ public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         LongestPalindromicSubstring obj = new LongestPalindromicSubstring();
-        System.out.print(obj.longestPalindrome("fabacd"));
+        System.out.print(obj.longestPalindrome("bbbab"));
     }
 
     /**
