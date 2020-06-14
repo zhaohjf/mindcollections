@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.courseschedule;
+package alg.zhj.special.fivetimes.courseschedule;
 
 import java.util.ArrayList;
 import java.util.Arrays;

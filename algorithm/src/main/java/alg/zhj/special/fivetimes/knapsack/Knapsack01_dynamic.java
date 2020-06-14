@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.knapsack;
+package alg.zhj.special.fivetimes.knapsack;
 
 /**
  *

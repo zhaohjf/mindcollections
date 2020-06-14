@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.island;
+package alg.zhj.special.fivetimes.island;
 
 /**
  * Created by zhaohongjie on 2020/5/15.

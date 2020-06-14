@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.island;
+package alg.zhj.special.fivetimes.island;
 
 /**
  * 从一个点出发，遍历，然后回到初始点的过程

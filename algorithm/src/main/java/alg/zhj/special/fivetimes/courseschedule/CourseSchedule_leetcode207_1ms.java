@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.courseschedule;
+package alg.zhj.special.fivetimes.courseschedule;
 
 /**
  * Created by zhaohongjie on 2020/5/17.

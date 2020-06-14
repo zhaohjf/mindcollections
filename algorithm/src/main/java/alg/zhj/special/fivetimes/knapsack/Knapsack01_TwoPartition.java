@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.knapsack;
+package alg.zhj.special.fivetimes.knapsack;
 
 /**
  * Created by zhaohongjie on 2020/4/18.

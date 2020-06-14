@@ -1,4 +1,4 @@
-package alg.zhj.monographicstudy.fivetimes.island;
+package alg.zhj.special.fivetimes.island;
 
 /**
  * 思路，标记从边界出发，包含0的连通分量。反过来想问题
