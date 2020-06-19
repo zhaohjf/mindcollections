@@ -35,6 +35,40 @@ public class ArrayRotate_189 {
             } while (i != current);
         }
     }
+
+    public String reverseLeftWords(String s, int n) {
+
+        if (s == null || n < 0) {
+            return null;
+        }
+
+        char[] c = s.toCharArray();
+        n = n % c.length;
+        n = c.length - n; // 这里是左旋，所以多了一步处理
+
+        int count = 0;
+        for (int i = 0; count < c.length; i++) {
+            int cur = i;
+            char prev = c[i];
+            do {
+                int next = (cur + n) % c.length;
+                char temp = c[next];
+                c[next] = prev;
+                prev = temp;
+                cur = next;
+                count++;
+            } while (i != cur);
+        }
+
+        return new String(c);
+    }
+
+    public String _reverseLeftWords(String s, int n) {
+        String res = "";
+        for(int i = n; i < n + s.length(); i++)
+            res += s.charAt(i % s.length());
+        return res;
+    }
     
     /**
      * 解法2，创建一个新数组，按(i + k) % nums.length，将数据转移到新数组中
@@ -85,5 +119,10 @@ public class ArrayRotate_189 {
         ArrayRotate_189 obj = new ArrayRotate_189();
         obj.rotate(a, 3);
         Arrays.stream(a).forEach(System.out::print);
+
+        System.out.println();
+        String res = obj.reverseLeftWords("abcdefg", 2);
+        System.out.print(res);
+
     }
 }
