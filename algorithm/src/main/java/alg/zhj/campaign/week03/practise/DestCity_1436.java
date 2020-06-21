@@ -11,7 +11,7 @@ import java.util.Set;
  ["Lima","Sao Paulo"]
  ]
 
- * {@link alg.zhj.mindcollections.leecode2.dfs.ConvertSortedArrayToBinarySearchTree}
+ *
  * Created by zhaohongjie on 2020/6/21.
  */
 public class DestCity_1436 {
