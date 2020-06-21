@@ -1,7 +1,5 @@
 package alg.zhj.mindcollections.leecode.search;
 
-import java.zhj.mindcollections.java.InnerClassAnalysis;
-
 import java.util.ArrayList;
 import java.util.List;
 

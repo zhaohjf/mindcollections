@@ -1,4 +1,4 @@
-package java.zhj.mindcollections.java;
+package zava.zhj.mindcollections.zava;
 
 /**
  * 为什么Java中的匿名内部类只可以访问外部final的局部变量呢？

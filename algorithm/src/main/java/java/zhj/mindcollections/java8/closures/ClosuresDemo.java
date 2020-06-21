@@ -1,5 +1,7 @@
 package java.zhj.mindcollections.java8.closures;
 
+import zava.zhj.mindcollections.zava.ReferenceInnerClass;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -70,7 +72,7 @@ public class ClosuresDemo {
      *   同步到时匿名内部类中。）
      *
      * 也就是说即使myVar进行了增量操作，lambda表达式仍会输出42。编译器报错是为阻止这种无意义场景的发生，避免引发不必要的错误。
-     * {@link java.zhj.mindcollections.java.ReferenceInnerClass} 示例程序 利用对象引用证明。
+     * {@link ReferenceInnerClass} 示例程序 利用对象引用证明。
      * 在基本类型情况下，编译器会进行检查来避免这种情况的发生，限制在lambda表达式（或匿名内部类）中使用的闭包自由变量的类型必须为
      * final类型或"事实上"的final类型（即，变量由内部类使用后不会再发生变化，这类变量称为——"事实上"的final类型）。
      *

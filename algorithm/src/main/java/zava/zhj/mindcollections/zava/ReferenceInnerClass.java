@@ -1,4 +1,4 @@
-package java.zhj.mindcollections.java;
+package zava.zhj.mindcollections.zava;
 
 /**
  * Created by zhaohongjie on 2018/10/18.
