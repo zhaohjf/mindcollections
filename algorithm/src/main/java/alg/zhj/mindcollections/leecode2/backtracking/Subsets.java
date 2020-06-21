@@ -190,7 +190,7 @@ public class Subsets {
 
     public static void main(String[] args) {
         Subsets subsets = new Subsets();
-        List<List<Integer>> lists = subsets.subsets_Liner(new int[]{1,2,3});
+        List<List<Integer>> lists = subsets.subsets(new int[]{1,2,3});
 
         lists.forEach(list -> {
             list.forEach(c -> System.out.print(c + ","));
