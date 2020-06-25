@@ -46,6 +46,23 @@ public class GetDecimalValue_1290 {
 
     public static void main(String[] args) {
         ListNode list = LinkedListUtils.getLinkedList(1, 0, 1);
-        System.out.println(getDecimalValue(list));
+        System.out.println(_20200625_getDecimalValue(list));
+    }
+
+    public static int _20200625_getDecimalValue(ListNode head) {
+        if (head == null) {
+            return 0;
+        }
+        int sum = 0;
+        while (head != null) {
+            if (head.val == 1) {
+                sum += 1;
+            }
+            if (head.next != null) {
+                sum = sum << 1;
+            }
+            head = head.next;
+        }
+        return sum;
     }
 }
