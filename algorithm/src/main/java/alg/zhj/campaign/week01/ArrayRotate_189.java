@@ -82,7 +82,10 @@ public class ArrayRotate_189 {
      *
      **/
     public static void  _reverse_rotate(int[] nums, int k) {
-        if (nums == null || nums.length < k) {
+
+//        if (nums == null || nums.length < k) {
+//        不然 k > nums.length时，直接返回了
+        if (nums == null || k < 0) {
             return;
         }
 
@@ -115,9 +118,9 @@ public class ArrayRotate_189 {
      * @param args
      */
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4, 5, 6, 7};
+        int[] a = {1, 2};
         ArrayRotate_189 obj = new ArrayRotate_189();
-        obj.rotate(a, 3);
+        obj._reverse_rotate(a, 3);
         Arrays.stream(a).forEach(System.out::print);
 
         System.out.println();

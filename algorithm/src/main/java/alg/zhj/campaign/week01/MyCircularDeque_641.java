@@ -39,6 +39,7 @@ public class MyCircularDeque_641 {
         if (isFull()) {
             return false;
         }
+        // 注意下面两行代码的顺序 20200625
         queue[rear] = value;
         rear = (rear + 1) % capacity;
 

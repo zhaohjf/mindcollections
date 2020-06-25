@@ -50,12 +50,35 @@ public class MergeTwoSortedArray_88 {
         }
     }
 
+    public void _20200625merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1;
+        int j = n - 1;
+        int size = m + n - 1;
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[size--] = nums1[i];
+                i--;
+            } else {
+                nums1[size--] = nums2[j];
+                j--;
+            }
+        }
+        while(i >= 0) {
+            nums1[size--] = nums1[i];
+            i--;
+        }
+        while(j >= 0) {
+            nums1[size--] = nums2[j];
+            j--;
+        }
+    }
+
     public static void main(String[] args) {
         int[] num1 = {1, 2, 3, 0, 0, 0};
         int[] num2 = {2, 5, 6};
 
         MergeTwoSortedArray_88 obj = new MergeTwoSortedArray_88();
-        obj._merge(num1, 3, num2, 3);
+        obj._20200625merge(num1, 3, num2, 3);
 
         Arrays.stream(num1).forEach(System.out::print);
     }
