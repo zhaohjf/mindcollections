@@ -1,4 +1,4 @@
-package alg.zhj.special.fivetimes.subset;
+package alg.zhj.special.fivetimes.collection.subset;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +91,8 @@ public class SubSets {
     }
 
     /**
+     * 用递归替换循环。。
+     *
      * 遍历整个数组，同上面递归方式类似，只不过是不需要for循环，时间复杂度它们是一样的O(2^n)
      *
      * @param nums

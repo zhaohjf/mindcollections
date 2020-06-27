@@ -1,4 +1,4 @@
-package alg.zhj.special.fivetimes.permute;
+package alg.zhj.special.fivetimes.collection.permute;
 
 import java.util.ArrayList;
 import java.util.List;
