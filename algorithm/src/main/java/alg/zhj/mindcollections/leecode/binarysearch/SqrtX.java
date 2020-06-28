@@ -70,6 +70,7 @@ public class SqrtX {
 
     public static void main(String[] args) {
         SqrtX sqrtX = new SqrtX();
+        sqrtX.mySqrt_1(6);
         double i = sqrtX.getSqrtRoot(10, 0.000001, 10000);
         System.out.println(i);
     }

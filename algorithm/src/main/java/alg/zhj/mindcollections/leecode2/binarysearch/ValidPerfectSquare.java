@@ -24,7 +24,7 @@ public class ValidPerfectSquare {
         }
 
         long l = 1;
-        long r = num/2;
+        long r = num/2;  // 这里除以2是因为，求一个数n的平方根x，必然有 x <= n/2 的性质
         while (l <= r) {
             long m = l + (r - l) / 2;
             long square = m * m;
