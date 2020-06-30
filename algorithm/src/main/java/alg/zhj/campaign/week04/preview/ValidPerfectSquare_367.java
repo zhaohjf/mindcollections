@@ -1,11 +1,11 @@
-package alg.zhj.mindcollections.leecode2.binarysearch;
+package alg.zhj.campaign.week04.preview;
 
 /**
  * https://leetcode-cn.com/problems/valid-perfect-square
  *
  * Created by zhaohongjie on 2019/3/6.
  */
-public class ValidPerfectSquare {
+public class ValidPerfectSquare_367 {
 
     /**
      * 注意数字溢出问题，两个较大的int相乘，值可能会溢出，所以需要提前将它们转换到long；而将两个较大int的乘积赋给一个long值是不行的。
@@ -57,8 +57,35 @@ public class ValidPerfectSquare {
         return false;
     }
 
+
+    /**
+     * "A square number is 1+3+5+7+..." is a pre-conceived knowledge.
+     * Unless, we haven't heard it before, coming up with that is very rare.
+     *
+     * This is a math problem：
+     1 = 1
+     4 = 1 + 3
+     9 = 1 + 3 + 5
+     16 = 1 + 3 + 5 + 7
+     25 = 1 + 3 + 5 + 7 + 9
+     36 = 1 + 3 + 5 + 7 + 9 + 11
+     ....
+     so 1+3+...+(2n-1) = (2n-1 + 1)n/2 = nn
+     *
+     * @param num
+     * @return
+     */
+    public boolean _isPerfectSquare(int num) {
+        int i = 1;
+        while (num > 0) {
+            num -= i;
+            i += 2;
+        }
+        return num == 0;
+    }
+
     public static void main(String[] args) {
-        ValidPerfectSquare obj = new ValidPerfectSquare();
-        System.out.println(obj.isPerfectSquare(808201));
+        ValidPerfectSquare_367 obj = new ValidPerfectSquare_367();
+        System.out.println(obj._isPerfectSquare(9));
     }
 }
