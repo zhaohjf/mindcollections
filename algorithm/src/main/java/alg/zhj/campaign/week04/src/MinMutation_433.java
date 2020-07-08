@@ -61,6 +61,7 @@ public class MinMutation_433 {
 
         for(String e : bank) {
             int diff = 0;
+            // 查找只需要有一次变换的bank[i]
             for(int i = 0; i < e.length(); i++) {
                 if(start.charAt(i) != e.charAt(i)) {
                     diff++;
