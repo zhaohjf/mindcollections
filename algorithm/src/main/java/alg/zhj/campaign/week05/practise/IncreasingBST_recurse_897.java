@@ -30,8 +30,10 @@ public class IncreasingBST_recurse_897 {
 
     public TreeNode increasingBST(TreeNode root, TreeNode tail) {
         if (root == null) return tail;
+        // 找到root的最左节点
         TreeNode res = increasingBST(root.left, root);
         root.left = null;
+        // 找到root右节点的最左节点，作为root的右节点（中序遍历）
         root.right = increasingBST(root.right, tail);
         return res;
     }
