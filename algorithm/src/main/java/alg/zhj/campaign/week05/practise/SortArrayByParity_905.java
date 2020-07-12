@@ -47,6 +47,16 @@ public class SortArrayByParity_905 {
         */
     }
 
+    public int[] __sortArrayByParity(int[] A) {
+        for (int i = 0, j = 0; j < A.length; j++)
+            if (A[j] % 2 == 0) {
+                int tmp = A[i];
+                A[i++] = A[j];
+                A[j] = tmp;;
+            }
+        return A;
+    }
+
     public static void main(String[] args) {
         int[] a = {0, 1, 2};
         int[] ans = sortArrayByParity(a);
