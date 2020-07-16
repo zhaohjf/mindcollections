@@ -7,6 +7,8 @@ import alg.zhj.mindcollections.interview.linkedlist.ListNode;
  */
 public class ReverseList_recurse_206 {
 
+    // cur 这个并不是每次递归都返回，只有递归到最底层时才会返回一次，head == null || head.next == null
+    // 递归也是多个方法的嵌套调用，最底层函数返回后，会将这个返回值层层传递出去。
     public ListNode reverseList(ListNode head) {
         //递归终止条件是当前为空，或者下一个节点为空
         if(head==null || head.next==null) {
