@@ -1,9 +1,6 @@
 package alg.zhj.campaign.week04.src;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by zhaohongjie on 2020/6/30.
@@ -88,7 +85,7 @@ public class MinMutation_433 {
         if(start.equals(end)) return 0;
 
         Set<String> bankSet = new HashSet<>();
-        for(String b: bank) bankSet.add(b);
+        Arrays.stream(bank).forEach(bankSet::add);
 
         char[] charSet = {'A', 'C', 'G', 'T'};
 
