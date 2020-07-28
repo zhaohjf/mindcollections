@@ -1,3 +1,4 @@
+```java
 public void sort_practise(int[] a) {
         for (int i = (a.length >>> 1) - 1; i >= 0; i--) {
             sink(a, i, a.length);
@@ -42,3 +43,5 @@ public void sort_practise(int[] a) {
         System.out.println();
         Arrays.stream(arr).forEach(x -> System.out.print(x + " "));
     }
+```
+
