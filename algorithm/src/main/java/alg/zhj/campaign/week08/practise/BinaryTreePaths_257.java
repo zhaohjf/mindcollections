@@ -18,31 +18,27 @@ public class BinaryTreePaths_257 {
     }
 
     private static void dfs(TreeNode root, List<String> ans, String path) {
+        if (root == null) {
+            return;
+        }
+        path += Integer.toString(root.val);
         if (root.left == null && root.right == null) {
             ans.add(path);
             return;
         }
-        dfs(root.left, ans, path + "->" + root.val);
-        dfs(root.right, ans, path  + "->" + root.val);
+        dfs(root.left, ans, path + "->");
+        dfs(root.right, ans, path  + "->");
     }
 
-    public void construct_paths(TreeNode root, String path, LinkedList<String> paths) {
-        if (root != null) {
-            path += Integer.toString(root.val);
-            if ((root.left == null) && (root.right == null))  // 当前节点是叶子节点
-                paths.add(path);  // 把路径加入到答案中
-            else {
-                path += "->";  // 当前节点不是叶子节点，继续递归遍历
-                construct_paths(root.left, path, paths);
-                construct_paths(root.right, path, paths);
-            }
-        }
+    public List<String> binaryTreePaths_(TreeNode root) {
+        List<String> answer = new ArrayList<String>();
+        if (root != null) searchBT(root, "", answer);
+        return answer;
     }
-
-    public List<String> _binaryTreePaths(TreeNode root) {
-        LinkedList<String> paths = new LinkedList();
-        construct_paths(root, "", paths);
-        return paths;
+    private void searchBT(TreeNode root, String path, List<String> answer) {
+        if (root.left == null && root.right == null) answer.add(path + root.val);
+        if (root.left != null) searchBT(root.left, path + root.val + "->", answer);
+        if (root.right != null) searchBT(root.right, path + root.val + "->", answer);
     }
 
     public List<String> __binaryTreePaths(TreeNode root) {
