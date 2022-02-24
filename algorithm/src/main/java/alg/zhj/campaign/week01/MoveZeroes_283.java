@@ -37,9 +37,16 @@ public class MoveZeroes_283 {
         int anchor = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
-                nums[anchor] = nums[anchor] ^ nums[i];
-                nums[i] = nums[anchor] ^ nums[i];
-                nums[anchor] = nums[anchor] ^ nums[i];
+                int a = nums[anchor], b = nums[i];
+                a = a ^ b;
+                b = a ^ b;
+                a = a ^ b;
+                nums[anchor] = a;
+                nums[i] = b;
+//                anchor == i 时对应的是同一个值，也就是在计算 a = a ^ a; a = a ^ a; a = a ^ a; 最后肯定是0了 =。= 20220224
+//                nums[anchor] = nums[anchor] ^ nums[i];
+//                nums[i] = nums[anchor] ^ nums[i];
+//                nums[anchor] = nums[anchor] ^ nums[i];
                 anchor++;
             }
         }
