@@ -7,10 +7,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * @author zhaohongjie <zhaohongjie03@kuaishou.com>
- * Created on 2022-03-30
- */
 public class SpeedTyping {
 
     public static void main(String[] args) {
