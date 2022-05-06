@@ -1,4 +1,4 @@
 # MindCollections
 
 待。。。
-test push
+test push q
