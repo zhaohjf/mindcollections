@@ -1,5 +1,7 @@
 package replay;
 
+import com.google.common.collect.Maps;
+
 import java.util.*;
 
 public class TwoSum {
@@ -45,6 +47,34 @@ public class TwoSum {
         return count;
     }
 
+    /**
+     * 数组有序情况下的两数之和
+     * @param numbers
+     * @param target
+     * @return
+     */
+    public int[] twoSumWithIncreasingOrderedArray(int[] numbers, int target) {
+        int l = 0; int r = numbers.length - 1;
+        while (l < r) {
+            int sum = numbers[l] + numbers[r];
+            if (sum == target) {
+                return new int[]{l, r};
+            } else if (sum > target) {
+                r--;
+            } else {
+                l++;
+            }
+        }
+        return new int[]{l, r};
+    }
+
+    /**
+     * alg.zhj.mindcollections.leecode.binarysearch.TwoSumIV
+     *      #find(alg.zhj.mindcollections.leecode.binarytree.search.TreeNode, int, java.util.Set)
+     * 二叉搜索树之两数之和
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         int[] nums = new int[]{1, 20, 80, 20, 80, 6, 70,30, 70, 2};
         System.out.println(twoSumCount(nums, 100));
