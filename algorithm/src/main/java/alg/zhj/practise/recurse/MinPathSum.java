@@ -3,7 +3,7 @@ package alg.zhj.practise.recurse;
 /**
  * https://leetcode.cn/problems/0i0mDW/
  */
-public class minPathSum {
+public class MinPathSum {
 
     public int minPathSum_wrong(int[][] grid) {
         int row = grid.length;
@@ -39,9 +39,35 @@ public class minPathSum {
         return Math.min(dfs(grid, row - 1, column), dfs(grid, row, column - 1)) + grid[row][column];
     }
 
+    /**=======================================================================================================================*/
+
+    public int minPathSum_dp(int[][] grid) {
+        int row = grid.length;
+        int column = grid[0].length;
+        int[][] dp = new int[row][column];
+        int sum = 0;
+        for (int i = row - 1; i >= 0; i--) {
+            sum += grid[i][column - 1];
+            dp[i][column - 1] = sum;
+        }
+        sum = 0;
+        for (int j = column - 1; j >= 0; j--) {
+            sum += grid[row - 1][j];
+            dp[row - 1][j] = sum;
+        }
+
+        for (int i = row - 2; i >= 0; i--) {
+            for (int j = column - 2; j >= 0; j--) {
+                dp[i][j] = Math.min(dp[i + 1][j], dp[i][j + 1]) + grid[i][j];
+            }
+        }
+
+        return dp[0][0];
+    }
+
     public static void main(String[] args) {
         int[][] grid = new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
-        minPathSum obj = new minPathSum();
-        System.out.println(obj.minPathSum(grid));
+        MinPathSum obj = new MinPathSum();
+        System.out.println(obj.minPathSum_dp(grid));
     }
 }
