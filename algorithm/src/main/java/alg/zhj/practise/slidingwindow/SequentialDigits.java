@@ -1,5 +1,6 @@
 package alg.zhj.practise.slidingwindow;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,5 +30,6 @@ public class SequentialDigits {
         SequentialDigits obj = new SequentialDigits();
         List<Integer> res = obj.sequentialDigits(100, 300);
         res.forEach(x -> System.out.println(x));
+        Serializable serializable = "s".startsWith("0") ? '0' : "ans";
     }
 }
