@@ -1,5 +1,8 @@
 package alg.zhj.practise.arraysohard;
 
+/**
+ * https://leetcode.cn/problems/maximum-subarray/
+ */
 public class MaxSubArray {
 
     public int maxSubArray(int[] nums) {
