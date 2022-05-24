@@ -24,5 +24,6 @@ public class SpiralOrder {
             if(++left > right) break;
         }
         return ans;
+
     }
 }
