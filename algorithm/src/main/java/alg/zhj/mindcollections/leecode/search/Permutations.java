@@ -11,41 +11,6 @@ import java.util.function.Supplier;
  */
 public class Permutations {
 
-    public List<List<Integer>> permute(int[] nums) {
-
-        List<List<Integer>> result = new ArrayList<>();
-
-        dfs(result, new ArrayList<Integer>(), nums, 0);
-
-        return result;
-    }
-
-    /**
-     * 使用数组效率会高些
-     *
-     * 该算法只适用于没有重复数字的情况下
-     *
-     * @param result
-     * @param temp
-     * @param nums
-     * @param level
-     */
-    private void dfs(List<List<Integer>> result, List<Integer> temp, int[] nums, int level) {
-        if (level == nums.length) {
-            result.add(new ArrayList<>(temp));
-            return;
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            if (temp.contains(nums[i])) {
-                continue;
-            }
-            temp.add(nums[i]);
-            dfs(result, temp, nums, level + 1);
-            temp.remove(temp.size() - 1);
-        }
-    }
-
     List<List<Integer>> perlist = new ArrayList<>();
 
     public List<List<Integer>> permute_2(int[] nums) {
